@@ -133,14 +133,15 @@
 .pro_list {
   width: 1200px;
   float: left;
-  margin-top: 28px; }
+  margin-top: 28px;
+  background: #fff; }
 
 .pro_list .pro_item {
   width: 272px;
   height: 370px;
   margin-right: 12px;
   margin-bottom: 34px;
-  border: 1px solid #fff;
+  border: 1px solid #FFF;
   display: inline-block;
   overflow: hidden; }
 
@@ -148,8 +149,16 @@
   position: absolute;
   border: 1px solid white; }
 
-.pro_list .pro_item .pro_like, .pro_surplus, .pro_list .pro_item .pro_add-cart {
+.pro_like, .pro_surplus, .pro_add-cart {
   display: none; }
+
+.pro_add-cart {
+  padding: 3px 10px;
+  border-radius: 3px; }
+
+.pro_like i {
+  color: red;
+  font-size: 14px; }
 
 .pro_info .pro_img {
   display: block;
