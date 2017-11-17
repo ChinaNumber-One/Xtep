@@ -38,17 +38,12 @@ window.onload = function() {
 									<ul>
 										<li>
 											<a href="#" target="_blank">
-												<img src="img/1.jpg"/>
+												<img src="img/${product.smpic[0]}.jpg"/>
 											</a>
 										</li>
 										<li>
 											<a href="#" target="_blank">
-												<img src="img/1.jpg"/>
-											</a>
-										</li>
-										<li>
-											<a href="#" target="_blank">
-												<img src="img/1.jpg"/>
+												<img src="img/${product.smpic[1]}.jpg"/>
 											</a>
 										</li>
 									</ul>

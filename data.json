@@ -4,6 +4,189 @@
 			{
 				"id" : "shop01",
 				"name" : "休闲鞋1",
+				"src" : "b1.jpg",
+				"smpic":["s1.jpg","s2.jpg"],
+				"price" : "299"
+			},
+			{
+				"id" : "shop02",
+				"name" : "休闲鞋2",
+				"src" : "b2.jpg",
+				"price" : "299"
+			},
+			{
+				"id" : "shop03",
+				"name" : "休闲鞋3",
+				"src" : "b3.jpg",
+				"price" : "299"
+			},
+			{
+				"id" : "shop04",
+				"name" : "休闲鞋4",
+				"src" : "b4.jpg",
+				"price" : "299"
+			},
+			{
+				"id" : "shop05",
+				"name" : "休闲鞋5",
+				"src" : "b5.jpg",
+				"price" : "299"
+			},
+			{
+				"id" : "shop06",
+				"name" : "休闲鞋6",
+				"src" : "b6.jpg",
+				"price" : "299"
+			},
+			{
+				"id" : "shop07",
+				"name" : "休闲鞋7",
+				"src" : "b7.jpg",
+				"price" : "299"
+			},
+			{
+				"id" : "shop08",
+				"name" : "休闲鞋8",
+				"src" : "b8.jpg",
+				"price" : "299"
+			},
+			{
+				"id" : "shop09",
+				"name" : "休闲鞋9",
+				"src" : "b9.jpg",
+				"price" : "299"
+			},
+			{
+				"id" : "shop010",
+				"name" : "休闲鞋10",
+				"src" : "b10.jpg",
+				"price" : "299"
+			},
+			{
+				"id" : "shop011",
+				"name" : "休闲鞋11",
+				"src" : "b11.jpg",
+				"price" : "299"
+			},{
+				"id" : "shop12",
+				"name" : "休闲鞋12",
+				"src" : "b12.jpg",
+				"price" : "299"
+			},
+			{
+				"id" : "shop13",
+				"name" : "休闲鞋13",
+				"src" : "b13.jpg",
+				"price" : "299"
+			},
+			{
+				"id" : "shop14",
+				"name" : "休闲鞋14",
+				"src" : "b14.jpg",
+				"price" : "299"
+			},
+			{
+				"id" : "shop15",
+				"name" : "休闲鞋15",
+				"src" : "b15.jpg",
+				"price" : "299"
+			},
+			{
+				"id" : "shop16",
+				"name" : "休闲鞋16",
+				"src" : "b16.jpg",
+				"price" : "299"
+			},
+			{
+				"id" : "shop17",
+				"name" : "休闲鞋17",
+				"src" : "b17.jpg",
+				"price" : "299"
+			},
+			{
+				"id" : "shop18",
+				"name" : "休闲鞋18",
+				"src" : "b18.jpg",
+				"price" : "299"
+			},
+			{
+				"id" : "shop19",
+				"name" : "休闲鞋19",
+				"src" : "b19.jpg",
+				"price" : "299"
+			},
+			{
+				"id" : "shop20",
+				"name" : "休闲鞋20",
+				"src" : "b20.jpg",
+				"price" : "299"
+			},
+			{
+				"id" : "shop21",
+				"name" : "休闲鞋21",
+				"src" : "b21.jpg",
+				"price" : "299"
+			},
+			{
+				"id" : "shop22",
+				"name" : "休闲鞋22",
+				"src" : "b22.jpg",
+				"price" : "299"
+			},{
+				"id" : "shop23",
+				"name" : "休闲鞋23",
+				"src" : "b23.jpg",
+				"price" : "299"
+			},
+			{
+				"id" : "shop24",
+				"name" : "休闲鞋24",
+				"src" : "b24.jpg",
+				"price" : "299"
+			},
+			{
+				"id" : "shop25",
+				"name" : "休闲鞋25",
+				"src" : "b25.jpg",
+				"price" : "299"
+			},
+			{
+				"id" : "shop26",
+				"name" : "休闲鞋26",
+				"src" : "b26.jpg",
+				"price" : "299"
+			},
+			{
+				"id" : "shop27",
+				"name" : "休闲鞋27",
+				"src" : "b27.jpg",
+				"price" : "299"
+			},
+			{
+				"id" : "shop28",
+				"name" : "休闲鞋28",
+				"src" : "b28.jpg",
+				"price" : "299"
+			},
+			{
+				"id" : "shop29",
+				"name" : "休闲鞋29",
+				"src" : "b29.jpg",
+				"price" : "299"
+			},
+			{
+				"id" : "shop30",
+				"name" : "休闲鞋30",
+				"src" : "b30.jpg",
+				"price" : "299"
+			}
+		]
+	},
+	"跑鞋":{
+		"list" : [
+			{
+				"id" : "shop01",
+				"name" : "休闲鞋1",
 				"src" : "item (1).jpg",
 				"price" : "299"
 			},
@@ -66,148 +249,120 @@
 				"name" : "休闲鞋11",
 				"src" : "item (11).jpg",
 				"price" : "299"
-			}
-		]
-	},
-	"跑鞋":{
-		"list" : [
-			{
-				"id" : "shop12",
-				"name" : "跑鞋1",
-				"src" : "item (12).jpg",
-				"price" : "499"
 			},
 			{
-				"id" : "shop13",
-				"name" : "跑鞋2",
-				"src" : "item (13).jpg",
-				"price" : "499"
+				"id" : "shop01",
+				"name" : "休闲鞋1",
+				"src" : "item (1).jpg",
+				"price" : "299"
 			},
 			{
-				"id" : "shop14",
-				"name" : "跑鞋3",
-				"src" : "item (14).jpg",
-				"price" : "499"
+				"id" : "shop02",
+				"name" : "休闲鞋2",
+				"src" : "item (2).jpg",
+				"price" : "299"
 			},
 			{
-				"id" : "shop15",
-				"name" : "跑鞋4",
-				"src" : "item (15).jpg",
-				"price" : "499"
+				"id" : "shop03",
+				"name" : "休闲鞋3",
+				"src" : "item (3).jpg",
+				"price" : "299"
 			},
 			{
-				"id" : "shop16",
-				"name" : "跑鞋5",
-				"src" : "item (16).jpg",
-				"price" : "499"
+				"id" : "shop04",
+				"name" : "休闲鞋4",
+				"src" : "item (4).jpg",
+				"price" : "299"
 			},
 			{
-				"id" : "shop17",
-				"name" : "跑鞋6",
-				"src" : "item (17).jpg",
-				"price" : "499"
+				"id" : "shop05",
+				"name" : "休闲鞋5",
+				"src" : "item (5).jpg",
+				"price" : "299"
 			},
 			{
-				"id" : "shop18",
-				"name" : "跑鞋7",
-				"src" : "item (18).jpg",
-				"price" : "499"
+				"id" : "shop06",
+				"name" : "休闲鞋6",
+				"src" : "item (6).jpg",
+				"price" : "299"
 			},
 			{
-				"id" : "shop19",
-				"name" : "跑鞋8",
-				"src" : "item (19).jpg",
-				"price" : "499"
+				"id" : "shop07",
+				"name" : "休闲鞋7",
+				"src" : "item (7).jpg",
+				"price" : "299"
 			},
 			{
-				"id" : "shop20",
-				"name" : "跑鞋9",
-				"src" : "item (20).jpg",
-				"price" : "499"
+				"id" : "shop08",
+				"name" : "休闲鞋8",
+				"src" : "item (8).jpg",
+				"price" : "299"
 			},
 			{
-				"id" : "shop21",
-				"name" : "跑鞋10",
-				"src" : "item (21).jpg",
-				"price" : "218"
+				"id" : "shop09",
+				"name" : "休闲鞋9",
+				"src" : "item (9).jpg",
+				"price" : "299"
 			},
 			{
-				"id" : "shop22",
-				"name" : "跑鞋11",
-				"src" : "item (22).jpg",
-				"price" : "365"
+				"id" : "shop010",
+				"name" : "休闲鞋10",
+				"src" : "item (10).jpg",
+				"price" : "299"
 			},
 			{
-				"id" : "shop23",
-				"name" : "跑鞋12",
-				"src" : "item (23).jpg",
-				"price" : "499"
+				"id" : "shop011",
+				"name" : "休闲鞋11",
+				"src" : "item (11).jpg",
+				"price" : "299"
 			},
 			{
-				"id" : "shop24",
-				"name" : "跑鞋13",
-				"src" : "item (24).jpg",
-				"price" : "499"
+				"id" : "shop01",
+				"name" : "休闲鞋1",
+				"src" : "item (1).jpg",
+				"price" : "299"
 			},
 			{
-				"id" : "shop25",
-				"name" : "跑鞋14",
-				"src" : "item (25).jpg",
-				"price" : "499"
+				"id" : "shop02",
+				"name" : "休闲鞋2",
+				"src" : "item (2).jpg",
+				"price" : "299"
 			},
 			{
-				"id" : "shop26",
-				"name" : "跑鞋15",
-				"src" : "item (26).jpg",
-				"price" : "499"
+				"id" : "shop03",
+				"name" : "休闲鞋3",
+				"src" : "item (3).jpg",
+				"price" : "299"
 			},
 			{
-				"id" : "shop27",
-				"name" : "跑鞋16",
-				"src" : "item (27).jpg",
-				"price" : "499"
+				"id" : "shop04",
+				"name" : "休闲鞋4",
+				"src" : "item (4).jpg",
+				"price" : "299"
 			},
 			{
-				"id" : "shop28",
-				"name" : "跑鞋17",
-				"src" : "item (28).jpg",
-				"price" : "499"
+				"id" : "shop05",
+				"name" : "休闲鞋5",
+				"src" : "item (5).jpg",
+				"price" : "299"
 			},
 			{
-				"id" : "shop29",
-				"name" : "跑鞋18",
-				"src" : "item (29).jpg",
-				"price" : "499"
+				"id" : "shop06",
+				"name" : "休闲鞋6",
+				"src" : "item (6).jpg",
+				"price" : "299"
 			},
 			{
-				"id" : "shop30",
-				"name" : "跑鞋19",
-				"src" : "item (30).jpg",
-				"price" : "499"
+				"id" : "shop07",
+				"name" : "休闲鞋7",
+				"src" : "item (7).jpg",
+				"price" : "299"
 			},
 			{
-				"id" : "shop31",
-				"name" : "跑鞋20",
-				"src" : "item (31).jpg",
-				"price" : "499"
-			},
-			{
-				"id" : "shop32",
-				"name" : "跑鞋21",
-				"src" : "item (32).jpg",
-				"price" : "499"
-			},
-			{
-				"id" : "shop33",
-				"name" : "跑鞋22",
-				"src" : "item (33).jpg",
-				"price" : "499"
-			},
-			{
-				"id" : "shop34",
-				"name" : "跑鞋23",
-				"src" : "item (34).jpg",
-				"price" : "499"
+				"id" : "shop08",
+				"name" : "休闲鞋8",
+				"src" : "item (8).jpg",
+				"price" : "299"
 			}
 			
 			
