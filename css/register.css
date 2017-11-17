@@ -1,0 +1,278 @@
+#registerBox {
+  width: 983px;
+  margin: 0 auto;
+  height: 515px; }
+
+#registerBox .content {
+  width: 928px;
+  height: 513px;
+  margin: 45px auto;
+  border: 1px solid #DCDCDC; }
+
+#registerBox .content #wel {
+  display: inline-block;
+  font-size: 18px;
+  margin-left: 37px;
+  margin-top: 34px;
+  margin-bottom: 16px;
+  padding-left: 9px;
+  float: left;
+  border-left: 5px solid #c01a20; }
+
+#registerBox .content .content_left {
+  width: 518px;
+  float: left;
+  clear: both;
+  height: 413px;
+  border-right: 1px solid #DBDBDB; }
+
+label {
+  display: inline-block;
+  font-size: 14px;
+  width: 80px;
+  float: left;
+  text-align: right;
+  margin-top: 6px; }
+
+#registerBox .telenumber label span, #registerBox .userName label span, #registerBox .email label span, #registerBox .yzpic label span, #registerBox .password label span, #registerBox .maketure label span, #registerBox .yzmessage label span {
+  color: red; }
+
+.content_left .telenumber, .content_left .userName, .content_left .password, .content_left .yzpic, .content_left .yzmessage, .content_left .email {
+  width: 456px;
+  height: 37px;
+  margin: 10px auto 0 auto;
+  margin-left: 45px; }
+
+#registerBox .ss {
+  display: block;
+  float: left;
+  width: 36px;
+  height: 36px;
+  font-size: 20px;
+  text-align: center;
+  line-height: 36px; }
+
+.telenumber input {
+  width: 220px;
+  height: 34px;
+  line-height: 34px;
+  margin-left: 7px;
+  float: left;
+  border: 1px solid #DCDCDC;
+  background: url(../img/iconfont-mima.png) no-repeat center left;
+  background-position: 10px;
+  background-color: #fff;
+  padding-left: 30px; }
+
+.yzpic input {
+  width: 130px;
+  height: 34px;
+  line-height: 34px;
+  margin-left: 7px;
+  float: left;
+  border: 1px solid #DCDCDC;
+  background-color: #fff;
+  padding-left: 5px; }
+
+.yzpic .pic {
+  line-height: 34px;
+  text-align: center;
+  height: 34px;
+  width: 80px;
+  background: goldenrod;
+  float: left;
+  margin-left: 10px;
+  border: 1px solid #DCDCDC; }
+
+.yzpic .another {
+  display: block;
+  float: left;
+  color: #7A7A7A;
+  height: 36px;
+  width: 60px;
+  line-height: 36px;
+  text-align: center;
+  font-size: 14px; }
+
+.yzmessage input {
+  width: 180px;
+  height: 34px;
+  line-height: 34px;
+  margin-left: 7px;
+  float: left;
+  border: 1px solid #DCDCDC;
+  background-color: #fff;
+  padding-left: 5px; }
+
+.yzmessage .getmessage {
+  display: block;
+  float: left;
+  color: #404040;
+  height: 36px;
+  width: 120px;
+  line-height: 36px;
+  text-align: center;
+  font-size: 14px; }
+
+.email input {
+  width: 265px;
+  height: 34px;
+  line-height: 34px;
+  margin-left: 7px;
+  float: left;
+  border: 1px solid #DCDCDC;
+  background: url(../img/iconfont-email.png) no-repeat center left;
+  background-position: 10px;
+  background-color: #fff;
+  padding-left: 40px; }
+
+.password input {
+  width: 265px;
+  height: 34px;
+  line-height: 34px;
+  margin-left: 7px;
+  float: left;
+  border: 1px solid #DCDCDC;
+  background: url(../img/iconfont-mima.png) no-repeat center left;
+  background-position: 10px;
+  background-color: #fff;
+  padding-left: 40px; }
+
+.content_left .pwdbottom {
+  height: 10px;
+  width: 360px;
+  margin: 0 auto;
+  margin-top: 3px; }
+
+#pwdbottom {
+  width: 25px;
+  float: right;
+  height: 6px;
+  background: url(../img/secLevel.png) no-repeat 0px 0px; }
+
+.content_left .agree {
+  width: 100%;
+  padding-top: 10px; }
+
+.content_left .agree #isagree {
+  margin-left: 145px;
+  float: left;
+  border: 1px solid #e2e2e2;
+  margin-top: 3px;
+  margin-right: 2px; }
+
+.agree span {
+  width: 90px;
+  height: 17px;
+  float: left;
+  font-size: 12px; }
+
+.agree p {
+  width: 111px;
+  height: 17px;
+  float: left;
+  color: red;
+  cursor: pointer;
+  font-size: 12px; }
+
+#registerbtn {
+  width: 305px;
+  height: 46px;
+  margin-top: 10px;
+  margin-left: 133px;
+  background-color: #c01a20;
+  color: #fff;
+  font-size: 22px;
+  border-radius: 5px;
+  border: 1px solid #c01a20;
+  cursor: pointer; }
+
+#or {
+  display: inline-block;
+  color: red;
+  height: 17px;
+  margin-top: 16px;
+  margin-left: 230px;
+  text-decoration: underline;
+  font-size: 14px;
+  cursor: pointer; }
+
+#registerBox .content .content_right {
+  width: 300px;
+  height: 371px;
+  float: left;
+  border-right: 1px solid #DBDBDB; }
+
+.content_right p {
+  margin-left: 59px;
+  margin-top: 115px;
+  font-size: 14px; }
+
+.content_right input {
+  width: 145px;
+  height: 32px;
+  margin-left: 59px;
+  margin-top: 17px;
+  background-color: #c01a20;
+  color: #fff;
+  font-size: 17px;
+  border-radius: 5px;
+  border: 1px solid #c01a20;
+  cursor: pointer; }
+
+.content_right span {
+  display: inline-block;
+  margin-top: 77px;
+  margin-left: 59px;
+  font-size: 14px; }
+
+.other {
+  width: 241px;
+  height: 35px;
+  margin-left: 59px;
+  margin-top: 10px; }
+
+.QQ {
+  margin-right: 10px;
+  width: 40px;
+  margin-bottom: 15px;
+  float: left;
+  cursor: pointer; }
+
+.other img {
+  display: inline-block;
+  float: left; }
+
+.QQ div {
+  width: 20px;
+  font-size: 12px;
+  margin-left: 5px;
+  float: left; }
+
+.taobao {
+  margin-right: 10px;
+  width: 47px;
+  margin-bottom: 15px;
+  float: left;
+  cursor: pointer; }
+
+.taobao div {
+  width: 26px;
+  font-size: 13px;
+  margin-left: 5px;
+  float: left; }
+
+.zhifubao {
+  margin-right: 10px;
+  width: 60px;
+  margin-bottom: 15px;
+  float: left;
+  cursor: pointer; }
+
+.zhifubao div {
+  width: 39px;
+  font-size: 13px;
+  margin-left: 5px;
+  float: left; }
+
+/*# sourceMappingURL=register.css.map */

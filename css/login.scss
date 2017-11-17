@@ -1,0 +1,169 @@
+#login_area{
+    width: 983px;
+    height: 480px;
+    margin: 0 auto;
+}
+.login_con{
+    width: 100%;
+}
+.login_left{
+    float: left;
+    margin-top: 40px;
+}
+.login_right {
+    position: relative;
+    width: 375px;
+    height: 375px;
+    border: 1px solid #e2e2e2;
+    float: left;
+    margin-top: 40px;
+    background: white;
+}
+.login_right span{
+    width: 375px;
+    height: 80px;
+    float: left;
+}
+.login_right span p {
+    font-size: 18px;
+    display: block;
+    line-height: 80px;
+    float: left;
+    color: gray;
+    cursor: pointer;
+}
+.login_right span p:nth-child(1) {
+    display: block;
+    margin-left: 80px;
+    margin-right: 55px;
+    cursor: pointer;
+    color: #000000;
+}
+.login_right .text {
+    width: 305px;
+    height: 35px;
+    margin-left: 35px;
+    border: 1px solid #e2e2e2;
+    margin-bottom: 15px;
+    float: left;
+}
+.login_right .text img {
+    margin-left: 5px;
+    margin-top: 8px;
+    float: left;
+}
+.text input {
+    width: 265px;
+    height: 35px;
+    float: right;
+    text-align: left;
+    border: 0px;
+    font-size: 14px;
+}
+.login_right .check {
+    width: 305px;
+    height: 40px;
+    margin-left: 35px;
+    float: left;
+}
+.login_right .check>input {
+    margin-left: 15px;
+    float: left;
+    margin-top: 15px;
+    margin-right: 22px;
+    cursor: pointer;
+}
+.login_right .check>p:nth-of-type(1) {
+    display: block;
+    float: left;
+    margin-right: 80px;
+    height:40px;
+    line-height: 40px;
+    font-size: 14px;
+}
+.login_right .check>p:nth-of-type(2){
+    display: block;
+    float: left;
+    height:40px;
+    line-height: 40px;
+    font-size: 14px;
+    
+}
+.login_right .check>p:nth-of-type(2) a{
+    color:#000 ;
+}
+#loginbtn{
+    width: 305px;
+    height: 46px;
+    margin-top: 10px;
+    margin-left: 34px;
+    background-color: #c01a20;
+    color: #fff;
+    font-size: 22px;
+    border-radius: 5px;
+    border: 1px solid #c01a20;
+    cursor: pointer;
+}
+.login_right>p {
+    width: 305px;
+    height: 32px;
+    margin-left: 35px;
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+
+
+
+.other {
+    width: 191px;
+    height:35px;
+    margin-left: 59px;
+    margin-top: 10px;
+    padding-left: 50px;
+}
+//qq
+.QQ{
+     margin-right: 10px;
+     width: 40px; 
+    margin-bottom: 15px; 
+    float: left;
+    cursor: pointer;
+}
+.other img{
+    display: inline-block;
+    float: left;
+}
+.QQ div {
+    width: 20px;
+    font-size: 12px;
+    margin-left: 5px;
+    float: left;
+}
+//淘宝
+.taobao{
+     margin-right: 10px;
+     width: 47px; 
+    margin-bottom: 15px; 
+    float: left;
+    cursor: pointer;
+}
+.taobao div {
+    width: 26px;
+    font-size: 13px;
+    margin-left: 5px;
+    float: left;
+}
+.zhifubao{
+     margin-right: 10px;
+     width: 60px; 
+    margin-bottom: 15px; 
+    float: left;
+    cursor: pointer;
+}
+.zhifubao div {
+    width: 39px;
+    font-size: 13px;
+    margin-left: 5px;
+    float: left;
+}
