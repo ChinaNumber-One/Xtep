@@ -43,16 +43,58 @@ window.onload = function() {
 				$(".pro_list").html(failed);
 
 			}
-			
-			$(".pro_info").click(function(){
-				var arr=[];
+			//点击商品进入详情页
+			$(".pro_item").click(function(){
+				//s
+				var fdjs0_str=$(this).find("#record").data("fdjs0")
+				var fdjs0_arr=fdjs0_str.split(",")
+				var fdjs1_str=$(this).find("#record").data("fdjs1")
+				var fdjs1_arr=fdjs1_str.split(",")
+				var fdjs2_str=$(this).find("#record").data("fdjs2")
+				var fdjs2_arr=fdjs2_str.split(",")
+				var fdjs=[];
+				fdjs.push(fdjs0_arr)
+				fdjs.push(fdjs1_arr)
+				fdjs.push(fdjs2_arr)
+				//m
+				var fdjm0_str=$(this).find("#record").data("fdjm0")
+				var fdjm0_arr=fdjm0_str.split(",")
+				var fdjm1_str=$(this).find("#record").data("fdjm1")
+				var fdjm1_arr=fdjm1_str.split(",")
+				var fdjm2_str=$(this).find("#record").data("fdjm2")
+				var fdjm2_arr=fdjm2_str.split(",")
+				var fdjm=[];
+				fdjm.push(fdjm0_arr)
+				fdjm.push(fdjm1_arr)
+				fdjm.push(fdjm2_arr)
+				//b
+				var fdjb0_str=$(this).find("#record").data("fdjb0")
+				var fdjb0_arr=fdjb0_str.split(",")
+				var fdjb1_str=$(this).find("#record").data("fdjb1")
+				var fdjb1_arr=fdjb1_str.split(",")
+				var fdjb2_str=$(this).find("#record").data("fdjb2")
+				var fdjb2_arr=fdjb2_str.split(",")
+				var fdjb=[];
+				fdjb.push(fdjb0_arr)
+				fdjb.push(fdjb1_arr)
+				fdjb.push(fdjb2_arr)
+				var colorcookie=$(this).find("#record").data("color").split(",");
+				var sizecookie=$(this).find("#record").data("size").split(",");
 				var info={
-					"proname":$(this).find(".pro_title").html(),
-					"proprice":$(this).find(".pro_price b").html(),
-					"prosrc":$(this).find("a").eq(2).find("img").attr("src")
+					"id":$(this).find("#record").data("id"),
+					"name":$(this).find("#record").data("name"),
+					"sex":$(this).find("#record").data("sex"),
+					"type":$(this).find("#record").data("type"),
+					"price":$(this).find("#record").data("price"),
+					"color":colorcookie,
+					"size":sizecookie,
+					"fdjs":fdjs,
+					"fdjm":fdjm,
+					"fdjb":fdjb
 				}
-				arr.push(info);
-				console.log(arr);
+				console.log(info)
+				setCookie("proinfo",JSON.stringify(info))
+				window.open("proinfo.html")
 			})
 
 		},
@@ -70,7 +112,7 @@ function showpro(index, json, tp) {
 			for(let i = 0; i < product.smpic.length; i++) {
 				simg += `<li>
 								<a href="javascript:;">
-									<img src="images/${product.smpic[i]}"/>
+									<img src="fdj/${product.smpic[i]}"/>
 								</a>
 						    </li>`
 
@@ -85,7 +127,7 @@ function showpro(index, json, tp) {
 								加入购物车
 							</a>
 							<a href="javascript:;"  class="pro_img">
-								<img src="images/${product.src[0]}"/>
+								<img src="fdj/${product.src[0]}"/>
 							</a>
 							<div class="pro_scroll">
 								<div class="pro_wrap">
@@ -102,23 +144,36 @@ function showpro(index, json, tp) {
 							</div>
 							<div class="pro_new">新品</div>
 						</div>
-						<span style="display:none" data-id=${product.id} data-name=${product.name}></span>
+						<span style="display:none" id="record" 
+						data-id="${product.id}" 
+						data-name="${product.name}" 
+						data-sex="${product.sex}"
+						data-price="${product.price}"
+						data-color="${product.color}"
+						data-size="${product.size}"
+						data-type="${product.type}"
+						data-fdjs0="${product.fdj.s[0]}" 
+						data-fdjs1="${product.fdj.s[1]}" 
+						data-fdjs2="${product.fdj.s[2]}"  
+						data-fdjm0="${product.fdj.m[0]}" 
+						data-fdjm1="${product.fdj.m[1]}"
+						data-fdjm2="${product.fdj.m[2]}"
+						data-fdjb0="${product.fdj.b[0]}"
+						data-fdjb1="${product.fdj.b[1]}" 
+						data-fdjb2="${product.fdj.b[2]}" 
+						></span>
 					</li>`
 		}
 	}
 	$(".pro_list").html(conStr);
-
 }
 function fn(index,json,tp){
 	//滑过小图改变对应大图
 				$(".pro_wrap ul li").mouseenter(function() {
 					var bigindex = $(this).parent().parent().parent().parent().parent().index()+(index-1)*8;//获取所在大图li的下标
 					var smallindex = $(this).index();//获取小图的li下标
-					$(this).parent().parent().parent().prev().find("img").attr("src", "images/" + json[tp].list[bigindex].src[smallindex])
-					$(this).css("border", "1px solid #f00")
-				})
-				$(".pro_wrap ul li").mouseleave(function() {
-					$(this).css("border", "1px solid #ddd")
+					$(this).parent().parent().parent().prev().find("img").attr("src", "fdj/" + json[tp].list[bigindex].src[smallindex])
+					$(this).css("border", "1px solid #f00").siblings().css("border", "1px solid #ddd")
 				})
 
 				//商品
@@ -169,7 +224,6 @@ function fn(index,json,tp){
 					})
 				})
 }
-
 
 
 
