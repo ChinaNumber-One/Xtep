@@ -144,6 +144,8 @@ $("#registerbtn").click(function(){
 		
 		alert("注册成功")
 		location.href="login.html"
+	}else{
+		alert("填写信息有误，请重新核对并填写")
 	}
 	
 })

@@ -12,13 +12,19 @@ $(window).scroll(function(){
 //点击登录
 $("#loginbtn").click(function(){
 	var cookie=JSON.parse(getCookie("user"));
+	
 	if($("#uName").val()==cookie.username||$("#uName").val()==cookie.useremail&&$("#uPwd").val()==cookie.userpwd){
 		location.href="index.html";
+		setCookie("islogin","1")
 	}else{
 		alert("账号或密码错误！")
 	}
+	
 })
 //
 $("#tiao").click(function(){
 	location.href="register.html"
+})
+$(".check p").eq(1).click(function(){
+	location.href="changemima.html"
 })

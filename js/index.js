@@ -1,16 +1,20 @@
 window.onload=function(){
-	if(getCookie("user")){
+	if(getCookie("islogin")=="1"){
 		var name=JSON.parse(getCookie("user")).username;
 		$(".myname").html(name);
 		$(".myname").css("display","inline-block")
 		$(".exit").css("display","inline-block")
 		$(".login").css("display","none")
 		$(".register").css("display","none")
+		$("#rightshow .right_show_con .rightlogo a em").css({
+			"background":"url(img/common-head.png) no-repeat center center",
+			"backgroundSize":"32px 32px"
+			})
 	}
 }
 //退出登录
 $(".exit").click(function(){
-	setCookie("user","")
+	setCookie("islogin","0")
 	location.reload();
 })
 //top  我的特步

@@ -10,6 +10,23 @@ $(window).scroll(function() {
 })
 
 window.onload = function() {
+		if(getCookie("islogin")=="1"){
+			var name=JSON.parse(getCookie("user")).username;
+			$(".myname").html(name);
+			$(".myname").css("display","inline-block")
+			$(".exit").css("display","inline-block")
+			$(".login").css("display","none")
+			$(".register").css("display","none")
+			$("#rightshow .right_show_con .rightlogo a em").css({
+			"background":"url(img/common-head.png) no-repeat center center",
+			"backgroundSize":"32px 32px"
+			})
+		}
+		//退出登录
+		$(".exit").click(function(){
+			setCookie("islogin","0")
+			location.reload();
+		})
 	var index = 1;
 	var tp = getCookie("type")
 	$(".searchres ul li:first a").html(tp)
@@ -80,6 +97,7 @@ window.onload = function() {
 				fdjb.push(fdjb2_arr)
 				var colorcookie=$(this).find("#record").data("color").split(",");
 				var sizecookie=$(this).find("#record").data("size").split(",");
+				var descookie=$(this).find("#record").data("des").split(",");
 				var info={
 					"id":$(this).find("#record").data("id"),
 					"name":$(this).find("#record").data("name"),
@@ -88,6 +106,7 @@ window.onload = function() {
 					"price":$(this).find("#record").data("price"),
 					"color":colorcookie,
 					"size":sizecookie,
+					"des":descookie,
 					"fdjs":fdjs,
 					"fdjm":fdjm,
 					"fdjb":fdjb
@@ -108,6 +127,7 @@ function showpro(index, json, tp) {
 	for(var j = (index - 1) * 8; j < index * 8; j++) {
 		if(j < json[tp].list.length) {
 			var product = json[tp].list[j]; //一个商品对象
+//			console.log(product)
 			var simg = "";
 			for(let i = 0; i < product.smpic.length; i++) {
 				simg += `<li>
@@ -161,6 +181,7 @@ function showpro(index, json, tp) {
 						data-fdjb0="${product.fdj.b[0]}"
 						data-fdjb1="${product.fdj.b[1]}" 
 						data-fdjb2="${product.fdj.b[2]}" 
+						data-des="${product.description}"
 						></span>
 					</li>`
 		}

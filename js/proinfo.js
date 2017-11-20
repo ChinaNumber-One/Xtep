@@ -11,6 +11,24 @@ $(window).scroll(function() {
 })
 var color_index=0;
 window.onload=function(){
+	if(getCookie("islogin")=="1"){
+			var name=JSON.parse(getCookie("user")).username;
+			$(".myname").html(name);
+			$(".myname").css("display","inline-block")
+			$(".exit").css("display","inline-block")
+			$(".login").css("display","none")
+			$(".register").css("display","none")
+			$("#rightshow .right_show_con .rightlogo a em").css({
+			"background":"url(img/common-head.png) no-repeat center center",
+			"backgroundSize":"32px 32px"
+			})
+		}
+		//退出登录
+		$(".exit").click(function(){
+			setCookie("islogin","0")
+			location.reload();
+		})
+	
 	fdjobj=JSON.parse(getCookie("proinfo"))
 	//创建中图
 	var fdjbox=		`<div class="fdj">
@@ -52,7 +70,7 @@ window.onload=function(){
 					</li>`
 	}
 	$(".color ul").html(color)
-	
+	//创建尺码
 	var size="";
 	for(var i=0;i<fdjobj.size.length;i++){
 		size+=		`<li>
@@ -62,6 +80,17 @@ window.onload=function(){
 					</li>`
 	}
 	$(".size ul").html(size)
+	//创建详情超大图
+	var xqimg="";
+	for(var i=0;i<fdjobj.des.length;i++){
+		xqimg+=		`<tr>
+						<td>
+							<img  src="fdj/${fdjobj.des[i]}">
+						</td>
+					</tr>`
+	}
+	$("#tab4 tbody").html(xqimg)
+	
 	
 	$(".color ul li").click(function(){
 	//选择颜色  显示对应的小图 ul
@@ -173,7 +202,7 @@ $(".pro_box").on("mouseenter",".smlimg li div",function(){
 	$(this).css("border","1px solid red");
 	$(".midimg a img").attr("src","fdj/"+fdjobj.fdjm[color_index][simg_index]);
 	$(".bigimg img").attr("src","fdj/"+fdjobj.fdjb[color_index][simg_index]);
-	//如果是当前ul 的最后一个li
+	//如果是当前ul 的最后一个li 改变蒙版大小
 	if(simg_index==$(this).parent().parent().find("li").size()-1){
 		$(".bigjing").css({
 			"width":440.217,
@@ -209,4 +238,22 @@ $(".left_menu ul li").mouseenter(function(){
 })
 $(".left_menu ul li").mouseleave(function(){
 	$(this).find("a").css("color","#0B0B0B")
+})
+
+//right_bar
+$(".right_bar ul li").click(function(){
+	var des_index=$(this).index();
+	$(this).addClass("current").siblings().removeClass("current");
+	$(".c-box").eq(des_index).css("display","block").siblings().css("display","none")
+})
+//评论bar
+$(".comment-filter a").click(function(){
+	var index=$(this).index();
+	$(this).addClass("current").siblings().removeClass("current")
+	if(index>0){
+		$(".comment-list").css("display","none")
+		$(".comment-list").eq(index-1).css("display","block")
+	}else{
+		$(".comment-list").css("display","block")
+	}
 })

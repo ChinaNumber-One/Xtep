@@ -1,0 +1,159 @@
+@charset "UTF-8";
+#gaimi {
+  width: 983px;
+  margin: 0 auto; }
+
+.typekind {
+  width: 100%;
+  overflow: hidden;
+  padding: 13px 0; }
+
+.typekind span {
+  margin-right: 10px; }
+
+.typekind span a {
+  color: #666;
+  font-size: 14px; }
+
+.containt {
+  width: 100%;
+  margin: 0 auto; }
+
+.center {
+  width: 100%;
+  float: left;
+  background-color: #f4f4f4;
+  border: 1px solid #E0E0E0; }
+
+.center-news {
+  width: 983px;
+  min-height: 480px;
+  margin: 0 auto; }
+
+.news {
+  width: 928px;
+  min-height: 376px;
+  margin-top: 51px;
+  background: white; }
+
+.news > div:nth-child(1) {
+  width: 780px;
+  height: 40px;
+  margin: 0 auto;
+  padding-top: 40px; }
+
+.news > div:nth-child(1) img {
+  display: inline-block; }
+
+.img-1 {
+  margin-bottom: 10px; }
+
+.news > span {
+  display: block;
+  width: 800px;
+  height: 20px;
+  margin: 0 auto;
+  margin-bottom: 15px; }
+
+.news span p:nth-child(1) {
+  color: #c01a20;
+  margin-right: 320px; }
+
+.news span p:nth-child(2) {
+  margin-right: 325px; }
+
+.news span p {
+  display: block;
+  font-size: 13px;
+  font-family: 微软雅黑;
+  float: left; }
+
+.tell-news {
+  width: 765px;
+  height: 180px;
+  margin: 0 auto;
+  border-bottom: 1px solid #e2e2e2; }
+
+.tel {
+  width: 390px;
+  height: 35px;
+  margin: 0 auto;
+  margin-bottom: 15px; }
+
+.tel label {
+  width: 85px;
+  height: 35px;
+  float: left;
+  font-size: 14px;
+  line-height: 35px;
+  color: gray; }
+
+.tel span {
+  width: 303px;
+  height: 35px;
+  float: left;
+  border: 1px solid #e2e2e2; }
+
+.tel span img {
+  margin-left: 8px;
+  display: inline-block;
+  vertical-align: middle; }
+
+.tel span input {
+  width: 265px;
+  height: 35px;
+  border: 0px; }
+
+.tel span a {
+  font-size: 12px;
+  text-align: center; }
+
+.print-news {
+  width: 370px;
+  height: 35px;
+  margin-left: 208px; }
+
+.print-news label {
+  width: 65px;
+  height: 35px;
+  font-size: 14px;
+  line-height: 35px;
+  color: gray;
+  float: left; }
+
+.print-news input {
+  width: 155px;
+  height: 35px;
+  border: 0px;
+  border: 1px solid #e2e2e2;
+  float: left;
+  padding-left: 5px; }
+
+#send_msg {
+  margin-left: 272px;
+  margin-top: 22px;
+  cursor: pointer; }
+
+.gaimiOK {
+  width: 200px;
+  margin: 0 auto;
+  min-height: 300px;
+  margin-top: 50px; }
+
+.gaimiOK img {
+  float: left;
+  display: inline-block; }
+
+.gaimiOK span {
+  float: left;
+  height: 34px;
+  display: inline-block;
+  line-height: 34px;
+  margin-left: 30px; }
+
+.gaimiOK a {
+  color: red;
+  float: left;
+  margin-left: 80px; }
+
+/*# sourceMappingURL=changemima.css.map */
