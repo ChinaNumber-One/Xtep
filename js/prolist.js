@@ -10,7 +10,7 @@ $(window).scroll(function() {
 })
 
 window.onload = function() {
-		if(getCookie("islogin")=="1"){
+		if(getCookie("islogin")=="1"||getCookie("remember")){
 			var name=JSON.parse(getCookie("user")).username;
 			$(".myname").html(name);
 			$(".myname").css("display","inline-block")
@@ -21,6 +21,18 @@ window.onload = function() {
 			"background":"url(img/common-head.png) no-repeat center center",
 			"backgroundSize":"32px 32px"
 			})
+		}
+		likearr=[];
+		if(getCookie("like")){
+			var likecookie=JSON.parse(getCookie("like"));
+			likearr=likecookie;
+//			console.log(typeof likecookie)
+			for(var i=0;i<likearr.length;i++){
+				if($(".nolike")){
+					$(".nolike").css("display","none")
+				}
+				$(`<li><img src="fdj/${likearr[i].src}"/><p>${likearr[i].name}</p><span>￥${likearr[i].price}<a href="javascript:;" style="float:right;color: #0086B3;display: block;" class="dellike">删除</a></span></li>`).appendTo("#likebox ul");
+			}
 		}
 		//退出登录
 		$(".exit").click(function(){
@@ -39,6 +51,7 @@ window.onload = function() {
 				total = Math.ceil(json[tp].list.length / 8); //总页数
 				showpro(index, json, tp);
 				fn(index,json,tp);
+				like(json,tp);
 				$('.M-box').pagination({
 					pageCount: total,
 					callback: function(api) {
@@ -49,6 +62,7 @@ window.onload = function() {
 						$.getJSON('http://127.0.0.1/Xtep/data.json', function(json) {
 							showpro(index, json, tp);
 							fn(index,json,tp);
+							like(json,tp);
 						});
 					}
 				});
@@ -61,7 +75,7 @@ window.onload = function() {
 
 			}
 			//点击商品进入详情页
-			$(".pro_item").click(function(){
+			$(".pro_item").click(function(){   
 				//s
 				var fdjs0_str=$(this).find("#record").data("fdjs0")
 				var fdjs0_arr=fdjs0_str.split(",")
@@ -111,7 +125,7 @@ window.onload = function() {
 					"fdjm":fdjm,
 					"fdjb":fdjb
 				}
-				console.log(info)
+//				console.log(info)
 				setCookie("proinfo",JSON.stringify(info))
 				window.open("proinfo.html")
 			})
@@ -121,7 +135,44 @@ window.onload = function() {
 	});
 
 }
-
+function like(json,tp){
+		$(".pro_like").click(function(e){
+			e.stopPropagation();
+	if(getCookie("islogin")=="1"||getCookie("remember")){
+			if($(".nolike")){
+				$(".nolike").css("display","none")
+			}
+			var likeindex=$(this).parent().parent().index();
+			console.log(likeindex)
+			$(`<li><img src="fdj/${json[tp].list[likeindex].fdj.s[0][0]}"/><p>${json[tp].list[likeindex].name}</p><span>￥${json[tp].list[likeindex].price}<a href="javascript:;" style="float:right;color: #0086B3;display: block;" class="dellike">删除</a></span></li>`).appendTo("#likebox ul");
+			var likejson={
+				"src":json[tp].list[likeindex].fdj.s[0][0],
+				"mimg":json[tp].list[likeindex].src[0],
+				"name":json[tp].list[likeindex].name,
+				"price":json[tp].list[likeindex].price
+			}
+			likearr.push(likejson)
+			setCookie("like",JSON.stringify(likearr),1)
+			alert("收藏成功！")
+	}else{
+		alert("您还未登录，请先登录")
+	}
+		})
+		$("#likebox ul").on("click",".dellike",function(){
+			if(confirm("确定要删除此收藏么？")){
+				var delindex=$(this).parent().parent().index();
+				console.log(likearr)
+				console.log(delindex)
+				$(this).parent().parent().remove();
+				likearr.splice(delindex-1,1)
+				setCookie("like",JSON.stringify(likearr),1)
+				alert("删除成功！")
+			}
+			console.log(likearr)
+		})
+	
+	
+}
 function showpro(index, json, tp) {
 	var conStr = "";
 	for(var j = (index - 1) * 8; j < index * 8; j++) {
@@ -143,7 +194,7 @@ function showpro(index, json, tp) {
 								<i class="iconfont icon-favorite"></i>
 								收藏
 							</a>
-							<a href="javascript:;"  class="pro_add-cart">
+							<a href="proinfo.html"  class="pro_add-cart">
 								加入购物车
 							</a>
 							<a href="javascript:;"  class="pro_img">

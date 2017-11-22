@@ -1,5 +1,5 @@
 window.onload=function(){
-	if(getCookie("islogin")=="1"){
+	if(getCookie("islogin")=="1"||getCookie("remember")){
 		var name=JSON.parse(getCookie("user")).username;
 		$(".myname").html(name);
 		$(".myname").css("display","inline-block")
@@ -11,6 +11,20 @@ window.onload=function(){
 			"backgroundSize":"32px 32px"
 			})
 	}
+		likearr=[];
+		//判断是否有收藏并显示到相应位置
+		if(getCookie("like")){
+			var likecookie=JSON.parse(getCookie("like"));
+			likearr=likecookie;
+//			console.log(typeof likecookie)
+			for(var i=0;i<likearr.length;i++){
+				if($(".nolike")){
+					$(".nolike").css("display","none")
+				}
+				$(`<li><img src="fdj/${likearr[i].src}"/><p>${likearr[i].name}</p><span>￥${likearr[i].price}<a href="javascript:;" style="float:right;color: #0086B3;display: block;" class="dellike">删除</a></span></li>`).appendTo("#likebox ul");
+			}
+		}
+		//判断是否有加入购物车的
 }
 //退出登录
 $(".exit").click(function(){
@@ -420,6 +434,12 @@ $("#more_f_b").click(function(){
 
 //右侧选项功能
 //like
+$(".right_like").hover(function(){
+	$("#likebox").css({"display":"block","height":window.innerHeight*0.9})
+},function(){
+	$("#likebox").css("display","none")
+})
+//iqr
 $(".right_iqr").find("a").hover(function(){
 	$(".ewm").css("display","block")
 },function(){
@@ -443,13 +463,5 @@ $("#header #sbtn").click(function(){
 	}else{
 	setCookie("type",$("#header #sBox").val())
 	location.href="prolist.html"
-	}
-})
-$("#header #sbtn").keydown(function(e){
-	console.log(1)
-	var e=e||event;
-	if(e.keyCode==13){
-		setCookie("type",$("#header #sBox").val())
-		location.href="prolist.html"
 	}
 })

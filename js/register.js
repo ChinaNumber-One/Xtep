@@ -10,6 +10,22 @@ $(window).scroll(function(){
 	$(".sort-list-box").css("display","none")
 })
 
+
+window.onload=function(){
+		likearr=[];
+		if(getCookie("like")){
+			var likecookie=JSON.parse(getCookie("like"));
+			likearr=likecookie;
+//			console.log(typeof likecookie)
+			for(var i=0;i<likearr.length;i++){
+				if($(".nolike")){
+					$(".nolike").css("display","none")
+				}
+				$(`<li><img src="fdj/${likearr[i].src}"/><p>${likearr[i].name}</p><span>￥${likearr[i].price}<a href="javascript:;" style="float:right;color: #0086B3;display: block;" class="dellike">删除</a></span></li>`).appendTo("#likebox ul");
+			}
+		}
+}
+
 //验证码
 var str="01234567890zxcvbnmasdfghjklqwertyuiop";
 function changeyzm(){
@@ -141,9 +157,10 @@ $("#registerbtn").click(function(){
 			"userpwd":$("#pwd").val()
 		}
 		setCookie("user",JSON.stringify(json),1)
-		
+		setCookie("islogin","1")
 		alert("注册成功")
-		location.href="login.html"
+		
+		location.href="mypage.html"
 	}else{
 		alert("填写信息有误，请重新核对并填写")
 	}

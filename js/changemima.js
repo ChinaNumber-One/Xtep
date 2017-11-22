@@ -9,11 +9,29 @@ $(".allpro").mouseleave(function() {
 $(window).scroll(function() {
 	$(".sort-list-box").css("display", "none")
 })
-
+window.onload=function(){
+		likearr=[];
+		if(getCookie("like")){
+			var likecookie=JSON.parse(getCookie("like"));
+			likearr=likecookie;
+//			console.log(typeof likecookie)
+			for(var i=0;i<likearr.length;i++){
+				if($(".nolike")){
+					$(".nolike").css("display","none")
+				}
+				$(`<li><img src="fdj/${likearr[i].src}"/><p>${likearr[i].name}</p><span>￥${likearr[i].price}<a href="javascript:;" style="float:right;color: #0086B3;display: block;" class="dellike">删除</a></span></li>`).appendTo("#likebox ul");
+			}
+		}
+}
 var newjson={};
+var mesyzm="";
 $(".getms").click(function(){
 	if(getCookie("user")){
 		if(JSON.parse(getCookie("user")).username==$("#tel").val()){
+			for(var i=0;i<6;i++){
+				mesyzm+=getRand(0,9);
+			}
+			$(this).html(mesyzm)
 			newjson={
 				"username":$("#tel").val(),
 				"useremail":JSON.parse(getCookie("user")).useremail
@@ -28,11 +46,11 @@ $(".getms").click(function(){
 })
 $("#send_msg").click(function(){
 	console.log(newjson)
-	if($("#dr_check_phone").val()){
+	if($("#dr_check_phone").val()==mesyzm){
 		$(".news").eq(0).css("display","none")
 		$(".news").eq(1).css("display","block")
 	}else{
-		alert("请填写验证码")
+		alert("验证码错误！")
 	}
 })
 

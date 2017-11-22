@@ -157,10 +157,69 @@ a {
 .myinfo_R_2 ul li a {
   font-size: 13px; }
 
+.myinfo_R_2 ul li {
+  display: none; }
+
 .myinfo_R_2 ul {
   position: relative; }
 
 .myinfo_R_2 ul li {
   position: absolute; }
+
+.myinfo_R_3 {
+  padding: 10px 0;
+  width: 950px;
+  float: left;
+  border: 1px solid #e2e2e2;
+  margin-top: 20px; }
+
+.mylike_hd {
+  border-bottom: 1px solid #e2e2e2;
+  padding-bottom: 15px; }
+
+.mylike_hd span {
+  height: 30px;
+  border-left: 5px solid red;
+  margin-left: 30px;
+  margin-right: 20px; }
+
+.myinfo_R_3 b {
+  font-size: 20px;
+  font-weight: 900;
+  color: #333333;
+  width: 100%; }
+
+.likeul {
+  padding: 10px; }
+
+.likeul li {
+  float: left;
+  width: 260px;
+  border: 1px solid #e2e2e2;
+  margin: 5px 23px; }
+
+.likeul li p {
+  font-size: 14px;
+  color: #333;
+  line-height: 14px;
+  margin-top: 10px; }
+
+.likeul li p:nth-of-type(2) {
+  font-size: 16px;
+  color: red;
+  line-height: 14px;
+  font-weight: 900;
+  height: 26px;
+  line-height: 26px; }
+
+.likeul li p:nth-of-type(2) a {
+  height: 20px;
+  padding: 3px;
+  float: right;
+  display: block;
+  border: 1px solid #999;
+  font-size: 14px;
+  line-height: 20px;
+  color: #333; }
 
 /*# sourceMappingURL=mypage.css.map */

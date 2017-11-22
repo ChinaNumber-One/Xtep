@@ -11,7 +11,7 @@ $(window).scroll(function() {
 })
 var color_index=0;
 window.onload=function(){
-	if(getCookie("islogin")=="1"){
+	if(getCookie("islogin")=="1"||getCookie("remember")){
 			var name=JSON.parse(getCookie("user")).username;
 			$(".myname").html(name);
 			$(".myname").css("display","inline-block")
@@ -22,6 +22,28 @@ window.onload=function(){
 			"background":"url(img/common-head.png) no-repeat center center",
 			"backgroundSize":"32px 32px"
 			})
+		}
+		likearr=[];
+		if(getCookie("like")){
+			var likecookie=JSON.parse(getCookie("like"));
+			likearr=likecookie;
+			for(var i=0;i<likearr.length;i++){
+				if($(".nolike")){
+					$(".nolike").css("display","none")
+				}
+				$(`<li><img src="fdj/${likearr[i].src}"/><p>${likearr[i].name}</p><span>￥${likearr[i].price}<a href="javascript:;" style="float:right;color: #0086B3;display: block;" class="dellike">删除</a></span></li>`).appendTo("#likebox ul");
+			}
+		}
+		shoparr=[];
+		count=0;
+		if(getCookie("shopcar")){
+			var spjson=JSON.parse(getCookie("shopcar"))
+			shoparr=spjson
+			for(var i=0;i<spjson.length;i++){
+				count+=Number(spjson[i].count);
+			}
+			sumnum+=count;
+			$(".rightshopcar a i").html(count)
 		}
 		//退出登录
 		$(".exit").click(function(){
@@ -142,27 +164,47 @@ $(".size ul li").click(function(){
 
 
 
-var count=Number($("#numtxt").val());
-var sumnum=0;
+var countnum=Number($("#numtxt").val());
+sumnum=0;
 $(".add").click(function(){
-	count++;
-	$("#numtxt").val(count)
+	countnum++;
+	$("#numtxt").val(countnum)
 })
 $(".cut").click(function(){
-	count--;
+	countnum--;
 	if(count<=1){
 		count=1;
 	}
-	$("#numtxt").val(count)
+	$("#numtxt").val(countnum)
 })
+
+//加入购物车
 $("#shopcar").click(function(){
-	if($(".size ul li").hasClass("current")&&$(".color ul li").hasClass("current")){
-		sumnum+=count;
-		$(".rightshopcar a i").html(sumnum);
+	if(getCookie("islogin")){
+		if($(".size ul li").hasClass("current")&&$(".color ul li").hasClass("current")){
+			var colorindex=$(".color ul").find(".current").index()
+			var sizeindex=$(".size ul").find(".current").index()
+			sumnum+=countnum;
+			$(".rightshopcar a i").html(sumnum);
+			var shopcar={
+				"id":fdjobj.id,
+				"src":fdjobj.fdjs[colorindex][0],
+				"name":$(".infohd h1").html(),
+				"color":fdjobj.color[colorindex],
+				"size":fdjobj.size[sizeindex],
+				"price":fdjobj.price,
+				"count":$("#numtxt").val()
+			}
+			shoparr.push(shopcar)
+			console.log(shoparr)
+			setCookie("shopcar",JSON.stringify(shoparr))
+			alert("加入购物车成功")
+		}else{
+			alert("请选择颜色跟尺码！")
+		}
 	}else{
-		alert("请选择颜色跟尺码！")
+		alert("请先登录！！")
 	}
-	
 })
 //鼠标移入中图 显示 放大镜大图跟蒙版
 $(".pro_box").on("mouseenter",".midimg",function(){

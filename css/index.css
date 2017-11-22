@@ -578,6 +578,45 @@ body {
   background-position-y: -128px;
   background-position-x: 2px; }
 
+#rightshow .right_show_con .right_like #likebox {
+  width: 300px;
+  height: 100%;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  display: none; }
+
+#rightshow .right_show_con .right_like #likebox ul li {
+  height: 64px;
+  border-bottom: 1px solid #666666;
+  font-size: 13px;
+  overflow: hidden; }
+
+#rightshow .right_show_con .right_like #likebox ul li img {
+  float: left; }
+
+#rightshow .right_show_con .right_like #likebox ul li p {
+  width: 160px;
+  overflow: hidden;
+  float: left;
+  max-height: 32px;
+  line-height: 32px; }
+
+#rightshow .right_show_con .right_like #likebox ul li span {
+  width: 230px;
+  display: inline-block;
+  float: left;
+  color: darkred; }
+
+#rightshow .right_show_con .right_like #likebox ul li a {
+  color: #333333; }
+
+#rightshow .right_show_con .right_like .likebox_hd {
+  font-size: 30px;
+  height: 50px;
+  background: #666; }
+
 #rightshow .right_show_con .right_iqr a em {
   display: block;
   width: 100%;
