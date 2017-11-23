@@ -180,9 +180,10 @@ body {
   font-size: 14px;
   color: #fff;
   line-height: 39px;
+  width: 150px;
+  text-align: center;
   float: left;
-  margin-left: 82px;
-  margin-right: 38px; }
+  display: block; }
 
 #nav .nav_con .pros li {
   float: left; }
